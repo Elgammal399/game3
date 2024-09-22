@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- -----google fonts--- -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nerko+One&display=swap"
+      rel="stylesheet" />
+    <!-- -----bootstrap---- -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- -----fontawsem---- -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- -----style sheet----- -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Games</title>
+  </head>
+  <body>
+    <!-- -----home----- -->
+    <section class="home-section d-flex flex-column align-items-center w-100">
+      <div class="bg-img w-100"></div>
+
+      <nav
+        class="navbar navbar-expand-lg navbg-color position-sticky top-0 z-3 col-md-6 col-lg-9 rounded-4">
+        <div class="container">
+          <div class="navbar-brand d-flex align-items-center">
+            <img class="logo-img" src="imgs/logo-sm.png" alt="logo" />
+            <h5 class="logo-content heading-ff fs-4 mt-2 ms-1 text-white">
+              GAME REVIEWS
+            </h5>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  role="button"
+                  aria-current="page"
+                  -data-category="mmorpg"
+                  >MMORPG</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" role="button" -data-category="shooter"
+                  >SHOOTER</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" role="button" -data-category="sailing"
+                  >SAILING</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" role="button" -data-category="permadeath"
+                  >PERMADEATH</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" role="button" -data-category="superhero"
+                  >SUPERHERO</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" role="button" -data-category="pixel"
+                  >PIXEL</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main class="main-section container mt-4">
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4"
+          id="gamesData"></div>
+      </main>
+    </section>
+
+    <!-- ----game details---- -->
+    <section class="game-detials w-100 pt-3 d-none">
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col text-white">
+            <div class="game-details">
+              <div class="game-details-title d-flex justify-content-between">
+                <h1 class="heading-ff">Details Game</h1>
+                <i class="fa fa-close fa-2x text-secondary"></i>
+              </div>
+              <div
+                class="game-details-body d-flex flex-wrap flex-md-nowrap justify-content-between column-gap-4 mt-4"
+                id="gameDetailsBody"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----loading screen---- -->
+    <section class="loading-section w-100 vh-100 text-center d-none">
+      <div class="col">
+        <div class="loading-container">
+          <div class="loading-frame">
+            <div class="rotate-r"></div>
+            <div class="rotate-l"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>

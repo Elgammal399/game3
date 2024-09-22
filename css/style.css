@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --data-font-family: "Comfortaa", sans-serif;
+  --data-heading-ff: "Nerko One", cursive;
+  --data-apple-ff: "Homemade Apple";
+  --data-navbg-color: #3a497b;
+  --data-bodybg-color: #272b31;
+}
+
+/* globale classes */
+
+body {
+  background-color: var(--data-bodybg-color);
+  font-family: var(--data-font-family);
+  /* height: 10000px; */
+}
+
+.heading-ff {
+  font-family: var(--data-heading-ff);
+}
+
+.navbg-color {
+  background-color: var(--data-navbg-color);
+}
+
+/* ---------------home-------------- */
+
+.bg-img {
+  height: 250px;
+  background-image: url(../imgs/wraper.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  transform: translateY(0%);
+}
+
+.logo-img {
+  width: 15%;
+}
+
+.nav-link {
+  font-size: 12.3px;
+  font-weight: 400;
+  line-height: 18.3px;
+  color: white !important;
+}
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+  color: #0099cc !important;
+}
+
+.card {
+  filter: grayscale(80%);
+  transition: all 0.5s;
+  background-color: var(--data-bodybg-color) !important;
+  color: white;
+}
+
+.card:hover {
+  scale: 1.05;
+  filter: grayscale(0%);
+}
+.card-title h3 {
+  font-family: var(--data-heading-ff);
+  font-size: 14px;
+  font-weight: 500;
+}
+.card-title span {
+  font-size: 12px;
+  font-weight: 700;
+}
+.card-body p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card-footer {
+  background-color: #272b2f !important;
+}
+
+.card-footer small {
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 10.5px;
+  background-color: #32383e;
+}
+
+/* ----------------game details section----------------- */
+
+.fa-close {
+  cursor: pointer;
+}
+
+.game-details-title h1,
+h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33.6px;
+}
+
+.game-details-body-content p span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  background-color: rgb(59, 183, 225);
+  color: black;
+  padding: 3px 4px;
+}
+/* ----------------loading section----------------- */
+
+.loading-section {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loading-frame .rotate-r {
+  position: absolute;
+  animation: loading-right 1s linear infinite;
+  width: 160px;
+  height: 160px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 0 #e15b64;
+  transform-origin: 80px 82px;
+}
+.loading-container {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+}
+.loading-frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+.loading-frame .rotate-r {
+  box-sizing: content-box;
+}
+
+@keyframes loading-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-frame .rotate-l {
+  position: relative;
+  animation: loading-left 1s linear infinite;
+  width: 150px;
+  height: 150px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 0 white;
+  transform-origin: 80px 82px;
+}
+
+.loading-frame .rotate-l {
+  box-sizing: content-box;
+}
+
+@keyframes loading-left {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
